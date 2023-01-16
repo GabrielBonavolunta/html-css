@@ -11,8 +11,16 @@
         }
 
         table{
+            position: relative;
             width: 500px;
             border-collapse: collapse;
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         th, td{
@@ -28,6 +36,16 @@
             background-color: gray;
             color: white;
         }
+
+        thead th{
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
+        }
     </style>
 </head>
 <body>
@@ -37,10 +55,11 @@
         TABLE -> THEAD -> TBODY -> TFOOT
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -56,15 +75,24 @@
                 <td>Rio de Janeiro</td>
                 <td>17 264 943</td>
             </tr>
+
+            <tr>
+                <td>Bahia</td>
+                <td>14 873 064</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>
+                <th scope="row">
                     Total de habitantes
                 </th>
                 <td class="num"><strong>0000</strong></td>
             </tr>
         </tfoot>
     </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint maiores sapiente cum veniam obcaecati autem, vel quia eveniet eum possimus quasi mollitia magni cupiditate provident deleniti dolorum facilis aut!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, quaerat nostrum. Recusandae distinctio quos iure! Dolorum ab cupiditate aspernatur. Quis nobis magnam alias animi necessitatibus unde eos fugit molestias quisquam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum illo molestiae fuga modi ratione aliquam ullam dignissimos voluptates quam illum recusandae id velit, deserunt magni accusamus praesentium nisi suscipit facilis.</p>
 </body>
 </html>
